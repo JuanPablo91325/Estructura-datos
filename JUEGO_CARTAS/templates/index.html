@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Cartas 21</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Pantalla de apuesta -->
+    <div class="apuesta" id="pantalla-apuesta">
+        <h2>Saldo: <span id="saldo-jugador">100</span> puntos</h2>
+        <h2>Apuesta: <span id="apuesta-actual">0</span> puntos</h2>
+        <div class="botones-apuesta">
+            <button id="aumentar-apuesta">Aumentar Apuesta</button>
+            <button id="disminuir-apuesta">Disminuir Apuesta</button>
+        </div>
+        <button id="iniciar-juego">Iniciar Juego</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div class="mesa" id="pantalla-juego" style="display: none;">
+        <div class="header">
+            <h2>Saldo: <span id="saldo-jugador-juego">100</span> puntos</h2>
+            <h2>Apuesta: <span id="apuesta-actual-juego">0</span> puntos</h2>
+            <h2>Ronda: <span id="ronda-actual">1</span></h2> <!-- Indicador de la ronda -->
+        </div>
+
+        <div class="zona cartas">
+            <h2>Máquina:</h2>
+            <div id="cartas-maquina" class="cartas-contenedor"></div>
+        </div>
+
+        <div class="zona cartas">
+            <h2>Jugador:</h2>
+            <div id="cartas-jugador" class="cartas-contenedor"></div>
+        </div>
+
+        <div class="zona botones">
+            <button id="pedir">Pedir carta</button>
+            <button id="plantarse">Plantarse</button>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+
+        <div class="zona">
+            <h2 id="resultado"></h2>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

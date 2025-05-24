@@ -1,0 +1,202 @@
+/* Fondo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #006400; /* Verde oscuro */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Pantalla del juego */
+.mesa {
+    background: #013220; /* Verde más oscuro */
+    border: 5px solid #8B0000; /* Borde rojo oscuro */
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: none;
+}
+
+/* Pantalla de apuesta */
+.apuesta {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.apuesta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffd700; /* Dorado */
+}
+
+.apuesta input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.apuesta button {
+    background: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apuesta button:hover {
+    background: #45a049;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700; /* Dorado */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Zonas de texto */
+.zona {
+    margin: 15px 0;
+}
+
+#jugador, #maquina, #resultado {
+    font-size: 1.2rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Zona de cartas */
+.cartas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cartas-contenedor .carta {
+    width: 80px;
+    height: 120px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    border: 2px solid #000;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartas-contenedor .carta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones */
+.botones button {
+    background: #ff4500; /* Naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.botones button:hover {
+    background: #e63900;
+    transform: scale(1.05);
+}
+
+.botones button:active {
+    background: #cc3300;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .botones button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.saldo h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.botones-apuesta button {
+    background: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 5px;
+}
+
+.botones-apuesta button:hover {
+    background: #45a049;
+}
